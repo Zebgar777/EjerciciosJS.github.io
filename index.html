@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JS</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>
+            <h2>Ejercicio 1</h2>
+        </legend>
+        <p>Escribe un script que cambie el texto del siguiente párrafo al presionar el botón. Has referencia al elemento
+            por su nombre de etiqueta.</p>
+        <p>Este párrafo debe cambiar de color</p>
+
+        <button id="boton1">Cambiar el color</button>
+        
+        <!-- comienza espacio para el script -->
+          <script>
+            document.getElementById("boton1").addEventListener("click", function() {
+                var parrafos = document.getElementsByTagName("p");
+                if (parrafos.length > 0) {
+                    parrafos[1].style.color = "red";
+                }
+            })
+          </script>
+        <!-- termina espacio para el script -->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h2>Ejercicio 2</h2>
+        </legend>
+        <p>Escribe un script que cambie el color del fondo del siguiente cuadro al presionar el botón</p>
+        <div class="cuadro1"></div><br>
+        
+        <button id="boton2">Cambiar el color</button>
+
+        <!-- comienza espacio para el script -->
+            <script>
+                const boton = document.getElementById("boton2");
+                const cuadro = document.querySelector(".cuadro1");
+
+                boton.addEventListener("click", () => {
+                    cuadro.style.backgroundColor = "#FF4500";
+                });
+            </script>
+        <!-- termina espacio para el script -->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h2>Ejercicio 3</h2>
+        </legend>
+        <p>Escribe un script que cambie el color de fondo del siguiente cuadro y modifique su tamaño. Has referencia al elemento por su clase.</p>
+        <div class="cuadro2"></div><br>
+
+        <button id="boton3">Cambiar el cuadro</button>
+
+        <!-- comienza espacio para el script -->
+            <script>
+                document.getElementById("boton3").addEventListener("click", function() {
+                    const cuadro = document.querySelector(".cuadro2");
+                    cuadro.style.backgroundColor = "lightcoral";
+                    cuadro.style.width = "200px";
+                    cuadro.style.height = "200px";
+                });
+            </script>
+        <!-- termina espacio para el script -->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h2>Ejercicio 4</h2>
+        </legend>
+        <p>Escribe un script que al presionar el botón convierta el siguiente cuadro en un circulo y que al volver a
+            presionarlo lo regrese a su forma original</p>
+        <div class="cuadro3"></div><br>
+        
+        <button id="boton4">Convertir en círculo</button>
+        
+        <!-- comienza espacio para el script -->
+            <script>
+                
+            </script>
+        <!-- termina espacio para el script -->
+
+    </fieldset>
+
+</body>
+
+</html>
